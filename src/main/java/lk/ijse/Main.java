@@ -14,6 +14,19 @@ public class Main {
 
         session.save(student);
 
+        student.setName("Nimal");
+        session.update(student);
+
+        session.delete(student);
+
+        student = new Student("S001", "Sunil", "Kandy");
+        session.save(student);
+
+        Student student1= session.get(Student.class, "S001");
+        System.out.println(student1);
+
+
+
         transaction.commit();
 
         session.close();
