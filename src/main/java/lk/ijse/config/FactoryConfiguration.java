@@ -18,7 +18,7 @@ public class FactoryConfiguration {
                 new FactoryConfiguration() : factoryConfiguration;
     }
 
-    public Session getSessionFactory(){
+    public Session getSession(){
         return sessionFactory.openSession();
     }
 }
