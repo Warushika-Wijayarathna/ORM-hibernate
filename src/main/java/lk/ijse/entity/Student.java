@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lk.ijse.embed.FullName;
 
 @Entity
 @Table(name = "Student")
@@ -12,14 +13,14 @@ public class Student {
     @Column(name = "id")
     private String id;
     @Column(name = "name")
-    private String name;
+    private FullName name;
     @Column(name = "address")
     private String address;
 
     public Student() {
     }
 
-    public Student(String id, String name, String address) {
+    public Student(String id, FullName name, String address) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -33,11 +34,11 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
+    public FullName getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(FullName name) {
         this.name = name;
     }
 
@@ -53,7 +54,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                ", name=" + name +
                 ", address='" + address + '\'' +
                 '}';
     }
