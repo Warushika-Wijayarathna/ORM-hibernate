@@ -1,4 +1,4 @@
-package lk.ijse.ConFig;
+package lk.ijse.config;
 
 import lk.ijse.entity.Student;
 import org.hibernate.Session;
